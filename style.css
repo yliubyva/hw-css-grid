@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Delius Unicase", cursive;
+}
+
 input,
 button,
 textarea,
@@ -21,4 +25,261 @@ button {
 img {
   max-width: 100%;
   height: auto;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.section__title {
+  margin-top: 120px;
+  margin-bottom: 80px;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: end;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.name,
+.date {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 117%;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.date {
+  font-weight: 400;
+  text-align: right;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.background {
+  grid-column: 1;
+  grid-row: 1 / 3;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    0deg,
+    rgba(36, 31, 36, 1),
+    rgba(91, 91, 91, 0.4476),
+    rgba(187, 186, 192, 0.26)
+  );
+
+  border-radius: 20px;
+}
+
+.item:hover {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.item:hover .background {
+  background: linear-gradient(
+    0deg,
+    rgba(36, 31, 36, 1),
+    rgba(91, 91, 91, 0.26),
+    rgba(187, 186, 192, 0)
+  );
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 0;
+}
+
+.icon--heart,
+.icon--down {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+  background: rgba(224, 224, 224, 0.5);
+
+  cursor: pointer;
+}
+
+.item:hover .icons {
+  opacity: 1;
+}
+
+.icon--heart:hover,
+.icon--down:hover {
+  background: rgba(224, 224, 224);
+}
+
+/* grid--architectural */
+
+.section__container--architectural {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    "photo-1 photo-2 photo-2"
+    "photo-3 photo-3 photo-4"
+    "photo-5 photo-6 photo-6";
+}
+
+.photo--architectural:nth-child(1) {
+  grid-area: photo-1;
+}
+
+.photo--architectural:nth-child(2) {
+  grid-area: photo-2;
+}
+
+.photo--architectural:nth-child(3) {
+  grid-area: photo-3;
+}
+
+.photo--architectural:nth-child(4) {
+  grid-area: photo-4;
+}
+
+.photo--architectural:nth-child(5) {
+  grid-area: photo-5;
+}
+
+.photo--architectural:nth-child(6) {
+  grid-area: photo-6;
+}
+
+/* grid--still-life */
+
+.section__container--still-life {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    "photo-1 photo-2 photo-2"
+    "photo-3 photo-3 photo-4"
+    "photo-3 photo-3 photo-4"
+    "photo-5 photo-5 photo-6";
+}
+
+.photo--still-life:nth-child(1) {
+  grid-area: photo-1;
+}
+
+.photo--still-life:nth-child(2) {
+  grid-area: photo-2;
+}
+
+.photo--still-life:nth-child(3) {
+  grid-area: photo-3;
+}
+
+.photo--still-life:nth-child(4) {
+  grid-area: photo-4;
+}
+
+.photo--still-life:nth-child(5) {
+  grid-area: photo-5;
+}
+
+.photo--still-life:nth-child(6) {
+  grid-area: photo-6;
+}
+
+/* grid--portrait-and-fashion */
+
+.section__container--portrait-and-fashion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    "photo-1 photo-2 photo-3"
+    "photo-4 photo-2 photo-5"
+    "photo-6 photo-7 photo-5"
+    "photo-6 photo-8 photo-8"
+    "photo-9 photo-9 photo-10";
+}
+
+.photo--portrait-and-fashion:nth-child(1) {
+  grid-area: photo-1;
+}
+
+.photo--portrait-and-fashion:nth-child(2) {
+  grid-area: photo-2;
+}
+
+.photo--portrait-and-fashion:nth-child(3) {
+  grid-area: photo-3;
+}
+
+.photo--portrait-and-fashion:nth-child(4) {
+  grid-area: photo-4;
+}
+
+.photo--portrait-and-fashion:nth-child(5) {
+  grid-area: photo-5;
+}
+
+.photo--portrait-and-fashion:nth-child(6) {
+  grid-area: photo-6;
+}
+
+.photo--portrait-and-fashion:nth-child(7) {
+  grid-area: photo-7;
+}
+
+.photo--portrait-and-fashion:nth-child(8) {
+  grid-area: photo-8;
+}
+
+.photo--portrait-and-fashion:nth-child(9) {
+  grid-area: photo-9;
+}
+
+.photo--portrait-and-fashion:nth-child(10) {
+  grid-area: photo-10;
+}
+
+.section--portrait-and-fashion {
+    margin-bottom: 120px;
 }
